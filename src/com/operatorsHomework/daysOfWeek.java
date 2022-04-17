@@ -12,11 +12,10 @@ public class daysOfWeek {
         String dayOfTheWeekDigit = myScanner.nextLine();
 
         String dayEnding = "th";
-        String dayOfTheWeek = new String();
+        String dayOfTheWeek = "";
         int dayOfTheWeekDigitToInt = 0;
 
         boolean isValidDay = true;
-        Object dayDigitObj = dayOfTheWeekDigit;
         try {
             dayOfTheWeekDigitToInt = Integer.parseInt(dayOfTheWeekDigit);
         } catch (NumberFormatException e) {
@@ -24,35 +23,27 @@ public class daysOfWeek {
         }
 
         if(isValidDay){
-            switch (dayOfTheWeekDigitToInt){
-                case 1:
+            switch (dayOfTheWeekDigitToInt) {
+                case 1 -> {
                     dayEnding = "st";
                     dayOfTheWeek = "Monday";
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     dayEnding = "nd";
                     dayOfTheWeek = "Tuesday";
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     dayEnding = "rd";
                     dayOfTheWeek = "Wednesday";
-                    break;
-                case 4:
-                    dayOfTheWeek = "Thursday";
-                    break;
-                case 5:
-                    dayOfTheWeek = "Friday";
-                    break;
-                case 6:
-                    dayOfTheWeek = "Saturday";
-                    break;
-                case 7:
-                    dayOfTheWeek = "Sunday";
-                    break;
-                default:
-                    isValidDay=false;
+                }
+                case 4 -> dayOfTheWeek = "Thursday";
+                case 5 -> dayOfTheWeek = "Friday";
+                case 6 -> dayOfTheWeek = "Saturday";
+                case 7 -> dayOfTheWeek = "Sunday";
+                default -> {
+                    isValidDay = false;
                     System.out.println("The input is NOT associated to a day of the week! Please input a valid digit 1-7.");
-                    break;
+                }
             }
 
             if(isValidDay){

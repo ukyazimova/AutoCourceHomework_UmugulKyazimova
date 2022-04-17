@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class largestNumberOfArray {
     public static void main(String[] args) {
-        //Below is the task for checking if the person is eligible to work
+        //Below is the task which finds array's largest number
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Please enter your array length");
         String arrLengthValue = myScanner.nextLine();
@@ -19,7 +19,7 @@ public class largestNumberOfArray {
         } catch (NumberFormatException e) {
             isValidArrLength = false;
         }
-        int arr[] = new int[arrLengthValueToInt];
+        int[] arr = new int[arrLengthValueToInt];
 
         if(isValidArrLength){
 

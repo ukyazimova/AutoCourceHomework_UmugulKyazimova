@@ -12,7 +12,6 @@ public class eligibleToWork {
         int ageToInt = 0;
 
         boolean isValid = true;
-        Object ageObj = age;
         try {
             ageToInt = Integer.parseInt(age);
         } catch (NumberFormatException e) {

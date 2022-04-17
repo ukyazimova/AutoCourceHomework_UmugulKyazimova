@@ -31,12 +31,10 @@ public class discountCalculation {
                 discountValue=0.2;
                 discountPercentage = "20%";
             }
-            if(quantityPurchasedToInt<100) {
 
-            }
             System.out.println("The unit price of the product is: 25");
             System.out.println("You have entered: "+quantityPurchasedToInt + " as quantity of products to purchase.");
-            if(discountPercentage!="0%"){
+            if(!discountPercentage.equals("0%")){
                 System.out.println("The discount per the purchased quantity is : "+discountPercentage);
                 System.out.println("The revenue from sale would be equal to: "+(quantityPurchasedToInt*25)*discountValue + "$.");
 
